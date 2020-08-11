@@ -1,0 +1,29 @@
+<!-- Page is {{(routerUrl$ | async)}} -->
+
+<mat-toolbar color="primary" style="position: fixed; z-index: 100; height: 64px;">
+
+  <!-- Center Logo -->
+  <div style="position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+    <div style="cursor: pointer;" (click)="onLogoClick()">6ish</div>
+  </div>
+
+
+  <!-- Right Justified Buttons -->
+  <div style="margin-left:auto; margin-right:0;">
+
+    <div *ngIf="(routerUrl$ | async) === '/'">
+      <div *ngIf="(searchQuery$ | async).QueryString === null || (searchQuery$ | async).QueryString.trim() === ''; then searchQueryEmpty else searchQueryNotEmpty"></div>
+      <ng-template #searchQueryEmpty>
+      </ng-template>
+      <ng-template #searchQueryNotEmpty>
+        <button mat-flat-button (click)="onSearchClick()" color="accent">Search</button>
+      </ng-template>
+    </div>
+
+  </div>
+
+</mat-toolbar>
+
+<div style="position: absolute; top: 64px; width: 100%">
+<router-outlet></router-outlet>
+</div>

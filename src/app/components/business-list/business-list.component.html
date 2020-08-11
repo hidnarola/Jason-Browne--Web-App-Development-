@@ -1,0 +1,16 @@
+<div *ngFor="let business of businesses">
+  <mat-card style="margin: 5px;" (click)="onCardClick(business)">
+
+    <mat-card-header>
+      <mat-card-title>{{business.Name}}</mat-card-title>
+      <mat-card-subtitle>{{business.Address}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div style="display: flex; flex-flow: row wrap; align-items: center;">
+        Comfort Rating: <app-rating [rating]="business?.ComfortRatingSummary?.ComfortRating"></app-rating>
+      </div>
+    </mat-card-content>
+
+  </mat-card>
+</div>

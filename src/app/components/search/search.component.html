@@ -1,0 +1,22 @@
+<mat-form-field style="width: calc(100% - 20px); padding-left: 10px; padding-right: 10px;" floatLabel="never">
+  <mat-icon matPrefix>search</mat-icon>
+  <mat-label>Search</mat-label>
+  <input matInput [value]="searchQueryString" (keydown.enter)="onEnterKeyDownSearchInput($event)"
+    (input)="onSearchInput($event)"
+    autocomplete="off">
+</mat-form-field>
+
+<mat-form-field style="width: calc(100% - 20px); padding-left: 10px; padding-right: 10px;" floatLabel="never">
+  <mat-icon matPrefix>place</mat-icon>
+  <mat-label>Location</mat-label>
+  <input [value]="locationString" matInput (input)="onLocationInput($event)"
+    [matAutocomplete]="locationautocomplete">
+
+  <mat-autocomplete autoActiveFirstOption #locationautocomplete="matAutocomplete"
+    (optionSelected)="onLocationAutoCompleteSelectionChanged($event)">
+    <mat-option value='Your current location'>
+      Use your current location
+    </mat-option>
+  </mat-autocomplete>
+
+</mat-form-field>

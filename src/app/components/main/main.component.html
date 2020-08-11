@@ -1,0 +1,12 @@
+<app-search [searchQueryString]="(searchQuery | async).QueryString"
+  [locationString]="(searchQuery | async).LocationString"
+  [coordinates]="(searchQuery | async).Coordinates"
+  (searchQueryStringChange)="onSearchQueryStringChange($event)"
+  (locationStringChange)="onLocationStringChange($event)"
+  (coordinatesChange)="onCoordinatesChange($event)"
+  (enterKeyPress)="onEnterKeyPress()">
+</app-search>
+
+<app-business-list [businesses]="(businesses | async)"
+  (businessSelect)="onBusinessSelect($event)">
+</app-business-list>
