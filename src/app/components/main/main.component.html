@@ -1,12 +1,30 @@
-<app-search [searchQueryString]="(searchQuery | async).QueryString"
+<app-search
+  [searchQueryString]="(searchQuery | async).QueryString"
   [locationString]="(searchQuery | async).LocationString"
   [coordinates]="(searchQuery | async).Coordinates"
   (searchQueryStringChange)="onSearchQueryStringChange($event)"
   (locationStringChange)="onLocationStringChange($event)"
   (coordinatesChange)="onCoordinatesChange($event)"
-  (enterKeyPress)="onEnterKeyPress()">
+  (enterKeyPress)="onEnterKeyPress()"
+>
 </app-search>
 
-<app-business-list [businesses]="(businesses | async)"
-  (businessSelect)="onBusinessSelect($event)">
+<app-business-list
+  [businesses]="businesses | async"
+  (businessSelect)="onBusinessSelect($event)"
+  [search]="search"
+  [searchBusiness]="searchBusiness"
+>
 </app-business-list>
+
+<section class="footer" fxLayout="row" fxLayoutAlign="space-around">
+  <a class="ficon">
+    <mat-icon aria-hidden="false">mail_outline</mat-icon>
+  </a>
+  <a class="ficon">
+    <mat-icon aria-hidden="false">info_outline</mat-icon>
+  </a>
+  <a class="ficon">
+    <mat-icon aria-hidden="false">help_outline</mat-icon>
+  </a>
+</section>

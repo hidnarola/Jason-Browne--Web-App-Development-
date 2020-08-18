@@ -1,4 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import './assets/fonts/stylesheet.css';
+
+
+
+html, body { height: 100%; font-family: 'Frutiger LT 57 Cn';}
+body { margin: 0;font-family: 'Frutiger LT 57 Cn';}
+
+
+
+.mat-toolbar.mat-primary{
+    background-color:#D52726;
+}
+
+.container-fluid{
+    padding: 0 16px;
+}
+
+.search-sec {background-color:#D52726;display: block; border-bottom: 1px solid #fff; padding-bottom: 10px;}
+.search-sec .search-bx {background-color:#D52726;display: block;width: 100%;padding:0px;}
+.search-sec .search-bx .mat-form-field-wrapper{background-color: #fff;padding-bottom: 0;border-radius: 5px;height: 40px;}
+.search-sec .search-bx .mat-form-field-wrapper .mat-form-field-underline {display: none;}
+.search-sec .search-bx .mat-form-field-wrapper .icon-saerch{margin: 10px 5px 0;}
+.search-sec .mat-form-field-appearance-legacy .mat-form-field-label{top: 0.98125em !important;}
+.search-sec .mat-form-field-infix{border-top:0 solid transparent;flex: inherit;width: 100%;}
+.search-sec input.mat-input-element{margin: -12px 0 0;vertical-align: middle;}
+
+
+.banner-bx {position: relative;background: #fff url("https://picsum.photos/1600/500/?blur") no-repeat center;background-size: cover;padding: 100px 0 0;}
+.banner-bx .b-profile-bx{display: flex; align-items: flex-end;margin: 0 0 -15px 30px;}
+.banner-bx .b-profile-bx .b-img{ position: relative;display: block;width: 150px;height: 150px;border-radius: 50%; background-color: #fff;}
+.banner-bx .b-profile-bx .b-img img{display: block;width: 100%;height: 100%;border-radius: 50%; border: 0;}
+.banner-bx .b-profile-bx h5{display: block; font-size: 20px; font-weight: 300;margin: 0 -42px 35px;line-height: 1.2; color: #fff; font-style: italic; position: relative;}
+.banner-bx .b-profile-bx h5 span{color: #202629;}
+p.txtLocal{display: block;font-size: 18px;font-weight:400;margin: 0 0;line-height: 1.2;padding: 20px 10px; text-align: center;background-color: #55B146;color: #fff;}
+
+
+.business-list-bx .bl-desc {padding: 8px;background-color: #BBE0B5;margin: 5px 0;border-radius: 5px;}
+.business-list-bx .bl-desc.lightpink {background-color: #EBA6A9;}
+.business-list-bx .bl-desc.yellow {background-color: #F9EAA3;}
+.business-list-bx .bl-desc .bl-left {display: flex;max-width: 65%;}
+.business-list-bx .bl-desc .bl-left img{width: 40px;height: 40px;border-radius: 4px;max-width: 100%;display: block;background-color: #ddd;border:0;position: relative;overflow: hidden;}
+.business-list-bx .bl-desc .bl-left .bld-desc{width: calc(100% - 40px); display: block;padding-left: 10px;}
+.business-list-bx .bl-desc .bl-left .bld-desc h4{display: block;font-size: 16px;font-weight:600;margin: 0 0 5px;line-height: 1.2;}
+.business-list-bx .bl-desc .bl-left .bld-desc p{display: block;font-size: 12px;font-weight:400;margin: 0 0;line-height: 1.2;}
+.business-list-bx .bl-desc .rating-bx .rating span,.rating-bx .rating span{margin: 0 !important;}
+
+.footer {position: fixed;padding: 10px;background-color: #55B146;bottom: 0;left: 0;right: 0;width: 100%;}
+.footer .ficon{width: 40px;height: 40px;border-radius: 50%;background-color: #fff;display: flex;justify-content: center;align-items: center;font-size: 20px;color: #231F23;}

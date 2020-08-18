@@ -1,0 +1,25 @@
+.business-details-bx{background-color: #fff;}
+.business-details-bx .bd-top{padding: 16px 0;}
+.business-details-bx .bd-top .bdt-desc img{width: 115px;height: 115px;display: block;position: relative;overflow: hidden;border-radius: 8px;background-color: #ddd;}
+.business-details-bx .bd-top .bdt-desc .bdt-right {width: calc(100% - 115px);padding-left: 20px;}
+.business-details-bx .bd-top .bdt-desc .bdt-right h4{color:#231F20;margin: 0 0 5px;font-size: 16px;font-weight: 600;}
+.business-details-bx .bd-top .bdt-desc .bdt-right p,.business-details-bx .bd-top .bdt-desc .bdt-right h5,
+.business-details-bx .bd-top .bdt-desc .bdt-right h5 .txtemail{color:#231F20;margin: 0 0 15px;font-size: 14px;font-weight: 400;line-height: 1.5;display: block;}
+.business-details-bx .bd-top .bdt-desc .bdt-right h5,
+.business-details-bx .bd-top .bdt-desc .bdt-right h5 .txtemail{margin: 0;}
+.business-details-bx .bd-top .bdt-rate {margin: 10px 0 20px;}
+.business-details-bx .bd-top .bdt-rate span{display: block;color: #231F20;margin: -5px 0 0;font-size: 16px;font-weight: 600;text-transform: capitalize;}
+.business-details-bx .bd-top .bdt-rate .btn-rate-place{font-size: 16px;font-weight: 600;text-transform: uppercase;background-color: #CD2027;border-radius: 5px;color: #fff;}
+.business-details-bx .bd-top .bdt-standard-bx {display: block;margin: 0 0 0px;}
+.business-details-bx .bd-top .bdt-standard-bx h4{color:#231F20;margin: 0 0 10px;font-size: 16px;font-weight: 600;}
+.business-details-bx .bd-top .bdt-standard-bx .checkbox-sec{display: block;}
+
+
+.business-details-bx .bl-desc {padding: 8px;background-color: #BBE0B5;margin: 5px 0;border-radius: 5px;}
+.business-details-bx .bl-desc.lightpink {background-color: #EBA6A9;}
+.business-details-bx .bl-desc.yellow {background-color: #F9EAA3;}
+.business-details-bx .bl-desc h4{color:#231F20;margin: 0 0 10px;font-size: 16px;font-weight: 600;}
+.business-details-bx .bl-desc h4 span{color:#231F20;margin: 0 0 0px 10px;font-size: 14px;font-weight: 400;}
+.business-details-bx .bl-desc .txtrate{display: flex;align-items: center;}
+.business-details-bx .bl-desc .txtrate span {color:#231F20;margin: 0 15px 0px 0;font-size: 14px;font-weight: 600;}
+.business-details-bx .bl-desc p{color:#231F20;margin: 0 0 0px;font-size: 16px;font-weight: 400;}

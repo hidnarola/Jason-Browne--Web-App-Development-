@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Frutiger LT 47 LightCn';
+    src: url('FrutigerLT-LightCn.woff2') format('woff2'),
+        url('FrutigerLT-LightCn.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Frutiger LT 87 ExtraBlackCn';
+    src: url('FrutigerLT-ExtraBlackCn.woff2') format('woff2'),
+        url('FrutigerLT-ExtraBlackCn.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Frutiger LT 57 Cn';
+    src: url('FrutigerLT-Cn.woff2') format('woff2'),
+        url('FrutigerLT-Cn.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

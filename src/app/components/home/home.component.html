@@ -1,0 +1,68 @@
+<div *ngFor="let business of BusinessDetails">
+  <div class="business-details-bx">
+    <div class="container-fluid">
+      <div class="bd-top">
+        <div class="bdt-desc" fxLayout="row">
+          <img src="" alt="" class="img" />
+          <div class="bdt-right">
+            <h4>{{ business.Name }}</h4>
+            <p>{{ business.Address }}</p>
+            <h5>
+              {{ business.Phone }}
+              <span class="txtemail">{{ business.Website }}</span>
+            </h5>
+          </div>
+        </div>
+        <div class="bdt-rate" fxLayout="row" fxLayoutAlign="space-between">
+          <div>
+            <app-rating
+              class="rating-bx"
+              [rating]="business?.ComfortRatingSummary?.ComfortRating"
+            ></app-rating>
+            <span>Location Score</span>
+          </div>
+          <button class="btn-rate-place" mat-button>
+            RATE THIS PLACE
+          </button>
+        </div>
+        <div class="bdt-standard-bx">
+          <h4>Covid Standards</h4>
+          <div class="checkbox-sec">
+            <div class="example-section">
+              <mat-checkbox class="example-margin">
+                Standard #1 description
+              </mat-checkbox>
+            </div>
+            <div class="example-section">
+              <mat-checkbox class="example-margin">
+                Standard #2 description
+              </mat-checkbox>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="txtLocal">Patron reviews of local establishments</p>
+    <div class="container-fluid">
+      <div class="bl-desc">
+        <div fxLayout="row" fxLayoutAlign="space-between">
+          <h4>Kathy F.<span>2 days ago</span></h4>
+          <div class="txtrate">
+            <span>Rating:</span>
+            <app-rating
+              class="rating-bx"
+              [rating]="business?.ComfortRatingSummary?.ComfortRating"
+            ></app-rating>
+          </div>
+        </div>
+        <p>
+          Review from user will be shown here and will have some detailed
+          information. It could be long or short, but will consist of some
+          information about the location and its service. We may want to
+          consider a character limit so it doesn’t go on forever, but yet gives
+          enought space to provide a thorough review.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

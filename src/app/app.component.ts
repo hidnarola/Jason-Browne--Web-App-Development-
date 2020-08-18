@@ -12,7 +12,7 @@ import { MainPageSearch } from './store/main-page.actions';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 
 // AppComponent contains our main toolbar across the top and is always shown to the user
@@ -23,25 +23,27 @@ import { MainPageSearch } from './store/main-page.actions';
 // only after the user has started a review.
 // Another example: on the Main page, show the "search" button only if the user
 // has entered text into the search box
-
 export class AppComponent implements OnInit {
-
   searchQuery$: Observable<SearchQuery>;
 
   routerUrl$ = new Subject<string>();
   routerUrl: string;
 
-  constructor(private router: Router, private location: Location,
-              private store: Store<{ searchQuery: SearchQuery }>) {
-      this.searchQuery$ = store.pipe(select('searchQuery'));
-
+  constructor(
+    private router: Router,
+    private location: Location,
+    private store: Store<{ searchQuery: SearchQuery }>
+  ) {
+    this.searchQuery$ = store.pipe(select('searchQuery'));
   }
 
   ngOnInit(): void {
-    this.router.events.pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd)).subscribe( e => {
-      this.routerUrl$.next(e.url);
-      this.routerUrl = e.url;
-    });
+    this.router.events
+      .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
+      .subscribe((e) => {
+        this.routerUrl$.next(e.url);
+        this.routerUrl = e.url;
+      });
   }
 
   // From the Main page
@@ -61,5 +63,4 @@ export class AppComponent implements OnInit {
     this.store.dispatch(ClearBusinesses());
     this.router.navigate(['/']);
   }
-
 }

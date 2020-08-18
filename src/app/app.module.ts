@@ -18,6 +18,7 @@ import { BusinessesReducer } from './store/businesses.reducer';
 import { SearchQueryReducer } from './store/search-query.reducer';
 import { BusinessesEffects } from './store/businesses.effects';
 import { environment } from '../environments/environment';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { environment } from '../environments/environment';
     BusinessListComponent,
     MainComponent,
     RatingComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,14 +39,16 @@ import { environment } from '../environments/environment';
     ReactiveFormsModule,
     FlexLayoutModule,
     StoreModule.forRoot({
-      businesses: BusinessesReducer, searchQuery: SearchQueryReducer
+      businesses: BusinessesReducer,
+      searchQuery: SearchQueryReducer,
     }),
     EffectsModule.forRoot([BusinessesEffects]),
     StoreDevtoolsModule.instrument({
-      maxAge: 25, logOnly: environment.production
-    })
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

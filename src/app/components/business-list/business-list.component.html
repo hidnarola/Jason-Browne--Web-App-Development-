@@ -1,16 +1,61 @@
-<div *ngFor="let business of businesses">
-  <mat-card style="margin: 5px;" (click)="onCardClick(business)">
-
-    <mat-card-header>
-      <mat-card-title>{{business.Name}}</mat-card-title>
-      <mat-card-subtitle>{{business.Address}}</mat-card-subtitle>
-    </mat-card-header>
-
-    <mat-card-content>
-      <div style="display: flex; flex-flow: row wrap; align-items: center;">
-        Comfort Rating: <app-rating [rating]="business?.ComfortRatingSummary?.ComfortRating"></app-rating>
-      </div>
-    </mat-card-content>
-
-  </mat-card>
+<div class="banner-bx" *ngIf="!search">
+  <div class="b-profile-bx">
+    <div class="b-img">
+      <img class="img" />
+    </div>
+    <h5><span>app</span> tagline here</h5>
+  </div>
+  <p class="txtLocal">Patron reviews of local establishments</p>
 </div>
+<div *ngIf="search">
+  <div class="container-fluid">
+    <div *ngFor="let business of businesses">
+      <div
+        class="bl-desc"
+        fxLayout="row"
+        fxLayoutAlign="space-between"
+        (click)="onCardClick(business)"
+      >
+        <div class="bl-left">
+          <img class="img" />
+          <div class="bld-desc">
+            <h4>{{ business.Name }}</h4>
+            <p>{{ business.Address }}</p>
+          </div>
+        </div>
+        <app-rating
+          class="rating-bx"
+          [rating]="business?.ComfortRatingSummary?.ComfortRating"
+        ></app-rating>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!search">
+  <div class="business-list-bx">
+    <div class="container-fluid">
+      <div *ngFor="let business of businesses">
+        <div
+          class="bl-desc"
+          fxLayout="row"
+          fxLayoutAlign="space-between"
+          (click)="onCardClick(business)"
+        >
+          <div class="bl-left">
+            <img class="img" />
+            <div class="bld-desc">
+              <h4>{{ business.Name }}</h4>
+              <p>{{ business.Address }}</p>
+            </div>
+          </div>
+          <app-rating
+            class="rating-bx"
+            [rating]="business?.ComfortRatingSummary?.ComfortRating"
+          ></app-rating>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-home [BusinessDetails]="BusinessSelection"></app-home>
